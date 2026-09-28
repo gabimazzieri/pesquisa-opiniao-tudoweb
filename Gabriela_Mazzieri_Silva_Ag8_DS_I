@@ -1,0 +1,52 @@
+# Pesquisa de Opinião - TudoWeb
+# Teste automático com 10 entrevistados
+
+# Dados fictícios para realizar o teste
+nomes = [
+    "Ana", "Bruno", "Carla", "Daniel", "Eduarda",
+    "Felipe", "Gabriela", "Henrique", "Isabela", "João"
+]
+
+idades = [25, 32, 19, 41, 28, 35, 22, 46, 30, 27]
+
+# 1 = EXCELENTE
+# 2 = BOM
+# 3 = RUIM
+opinioes = [1, 2, 1, 3, 2, 1, 2, 3, 1, 2]
+
+# Contadores
+excelente = 0
+ruim = 0
+
+print("=== PESQUISA DE SATISFAÇÃO - TUDOWEB ===")
+
+# Teste automático com 10 entrevistados
+for entrevistado in range(10):
+
+    nome = nomes[entrevistado]
+    idade = idades[entrevistado]
+    opiniao = opinioes[entrevistado]
+
+    print("\nEntrevistado", entrevistado + 1)
+    print("Nome:", nome)
+    print("Idade:", idade)
+
+    # Estrutura de decisão
+    if opiniao == 1:
+        excelente += 1
+        print("Opinião: EXCELENTE")
+
+    elif opiniao == 2:
+        print("Opinião: BOM")
+
+    elif opiniao == 3:
+        ruim += 1
+        print("Opinião: RUIM")
+
+    else:
+        print("Opinião inválida!")
+
+# Resultado final
+print("\n=== RESULTADO DA PESQUISA ===")
+print("Quantidade de respostas EXCELENTE:", excelente)
+print("Quantidade de respostas RUIM:", ruim)
